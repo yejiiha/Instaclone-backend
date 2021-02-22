@@ -38,7 +38,7 @@ const resolverFn = async (
       email,
       bio,
       ...(uglyPassword && { password: uglyPassword }),
-      ..._(avatarUrl && { avatar: avatarUrl }),
+      ...(avatarUrl && { avatar: avatarUrl }),
     },
   });
 
