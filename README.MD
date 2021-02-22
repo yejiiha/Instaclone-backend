@@ -11,9 +11,9 @@ Instaclone Backend
 - [ ] Change Avatar (Image Upload)
 - [ ] Follow User
 - [ ] Unfollow User
+- [ ] See Followers and Following with Pagination
+- [ ] Computed Fields
 - [ ] Search Users
-- [ ] See Followers
-- [ ] See Following
 
 ## Photos:
 
@@ -25,3 +25,9 @@ Instaclone Backend
 - [ ] See Feed
 - [ ] Search Photos
 - [ ] See Hashtags
+
+## Comments:
+
+- [ ] Comment on Photo
+- [ ] Edit Comment
+- [ ] Delete Comment
