@@ -1,5 +1,6 @@
 import client from "../../client";
 import { protectedResolvers } from "../../users/users.utils";
+import { processHashtags } from "../photos.utils";
 
 export default {
   Mutation: {
@@ -8,11 +9,7 @@ export default {
         let hashtagObj = [];
         if (caption) {
           // Parse caption
-          const hashtags = caption.match(/#[\w]+/g);
-          hashtagObj = hashtags.map((hashtag) => ({
-            where: { hashtag },
-            create: { hashtag },
-          }));
+          hashtagObj = processHashtags(caption);
         }
         // Get or create Hashtags
         return client.photo.create({
