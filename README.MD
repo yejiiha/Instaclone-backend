@@ -25,9 +25,15 @@ Instaclone Backend
 - [ ] See Feed
 - [ ] Search Photos
 - [ ] See Hashtags
+- [ ] See Photo Comments
+- [ ] Is Mine (Delete Photo)
 
 ## Comments:
 
 - [ ] Comment on Photo
 - [ ] Edit Comment
-- [ ] Delete Comment
+- [ ] Delete Comment (Is Mine)
+
+## Extras:
+
+- [ ] S3 Image Upload
