@@ -27,10 +27,16 @@ export const protectedResolvers = (ourResolver) => (
   info
 ) => {
   if (!context.loggedInUser) {
-    return {
-      ok: false,
-      error: "Please log in to perform this action",
-    };
+    const query = info.operation.operation === "query";
+
+    if (query) {
+      return null;
+    } else {
+      return {
+        ok: false,
+        error: "Please log in to perform this action",
+      };
+    }
   }
   return ourResolver(root, args, context, info);
 };
