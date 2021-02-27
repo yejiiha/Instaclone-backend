@@ -37,3 +37,10 @@ Instaclone Backend
 ## Extras:
 
 - [ ] S3 Image Upload
+
+## DM:
+
+- [ ] Create ChatingRoom
+- [ ] Get ChatingRoom
+- [ ] Send Message
+- [ ] Realtime Messages
