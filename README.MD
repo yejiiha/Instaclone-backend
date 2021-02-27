@@ -40,7 +40,7 @@ Instaclone Backend
 
 ## DM:
 
-- [ ] Create ChatingRoom
+- [ ] See ChatingRooms
+- [ ] Send Message (Create ChatingRoom)
 - [ ] Get ChatingRoom
-- [ ] Send Message
 - [ ] Realtime Messages
