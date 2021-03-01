@@ -44,4 +44,5 @@ Instaclone Backend
 - [ ] Send Message (Create ChatingRoom)
 - [ ] See ChatingRoom
 - [ ] Computed Fields
+- [ ] See Message
 - [ ] Realtime Messages
