@@ -11,7 +11,7 @@ export default {
       if (!user) {
         return {
           ok: false,
-          error: "User not found.",
+          error: "User is not found.",
         };
       }
       // Check password with args.password
