@@ -25,8 +25,9 @@ const apollo = new ApolloServer({
     }
   },
   subscriptions: {
-    onConnect: async ({ token }) => {
-      if (!token) {
+    onConnect: async (params) => {
+      console.log(params);
+      if (!params.token) {
         throw new Error("You should log in.");
       }
       const loggedInUser = await getUser(token);
