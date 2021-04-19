@@ -30,7 +30,7 @@ const apollo = new ApolloServer({
       if (!params.token) {
         throw new Error("You should log in.");
       }
-      const loggedInUser = await getUser(token);
+      const loggedInUser = await getUser(params.token);
       return {
         loggedInUser,
       };
