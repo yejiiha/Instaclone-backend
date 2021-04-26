@@ -45,7 +45,16 @@ export default {
       });
       return Boolean(exists);
     },
-    photos: ({ id }) => client.user.findUnique({ where: { id } }).photos(),
+    photos: ({ id }) =>
+      client.user
+        .findUnique({
+          where: { id },
+        })
+        .photos({
+          orderBy: {
+            id: "desc",
+          },
+        }),
     totalPhotos: ({ id }) =>
       client.photo.count({
         where: {
