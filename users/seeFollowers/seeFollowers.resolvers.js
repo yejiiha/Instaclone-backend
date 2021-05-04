@@ -2,7 +2,7 @@ import client from "../../client";
 
 export default {
   Query: {
-    seeFollowers: async (_, { username, page }) => {
+    seeFollowers: async (_, { username, offset }) => {
       const ok = await client.user.findUnique({
         where: { username },
         select: { id: true },
@@ -17,15 +17,11 @@ export default {
         .findUnique({ where: { username } })
         .followers({
           take: 7,
-          skip: (page - 1) * 7,
+          skip: offset,
         });
-      const totalFollowers = await client.user.count({
-        where: { following: { some: { username } } },
-      });
       return {
         ok: true,
         followers,
-        totalPages: Math.ceil(totalFollowers / 7),
       };
     },
   },

@@ -7,6 +7,7 @@ export default {
         where: {
           caption: {
             contains: keyword,
+            mode: "insensitive",
           },
         },
       }),

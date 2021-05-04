@@ -8,6 +8,6 @@ export default gql`
   }
 
   type Query {
-    seeFollowing(username: String!, lastId: Int): SeeFollowingResult!
+    seeFollowing(username: String!, offset: Int!): SeeFollowingResult!
   }
 `;

@@ -2,7 +2,7 @@ import client from "../../client";
 
 export default {
   Query: {
-    seeFollowing: async (_, { username, lastId }) => {
+    seeFollowing: async (_, { username, offset }) => {
       const ok = await client.user.findUnique({
         where: { username },
         select: { id: true },
@@ -17,8 +17,7 @@ export default {
         .findUnique({ where: { username } })
         .following({
           take: 7,
-          skip: lastId ? 1 : 0,
-          ...(lastId && { cursor: { id: lastId } }),
+          skip: offset,
         });
       return {
         ok: true,
