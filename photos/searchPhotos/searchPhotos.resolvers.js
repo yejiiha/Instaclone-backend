@@ -5,10 +5,27 @@ export default {
     searchPhotos: (_, { keyword }) =>
       client.photo.findMany({
         where: {
-          caption: {
-            contains: keyword,
-            mode: "insensitive",
-          },
+          OR: [
+            {
+              caption: {
+                contains: keyword,
+                mode: "insensitive",
+              },
+            },
+            {
+              comments: {
+                some: {
+                  payload: {
+                    contains: keyword,
+                    mode: "insensitive",
+                  },
+                },
+              },
+            },
+          ],
+        },
+        orderBy: {
+          createdAt: "desc",
         },
       }),
   },
