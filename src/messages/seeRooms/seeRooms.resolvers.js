@@ -12,6 +12,9 @@ export default {
             },
           },
         },
+        orderBy: {
+          id: "asc",
+        },
       })
     ),
   },

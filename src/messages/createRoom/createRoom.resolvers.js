@@ -36,7 +36,7 @@ export default {
       if (existRoom) {
         return {
           ok: false,
-          error: "The Room already exist!",
+          error: "This room already exists. You cannot select this user.",
         };
       }
 
