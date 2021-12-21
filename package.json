@@ -24,7 +24,7 @@
   "dependencies": {
     "@babel/cli": "^7.13.16",
     "@prisma/client": "^2.15.0",
-    "apollo-server": "^2.19.2",
+    "apollo-server": "^2.25.3",
     "apollo-server-express": "^2.21.0",
     "aws-sdk": "^2.852.0",
     "bcrypt": "^5.0.0",
